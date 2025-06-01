@@ -34,6 +34,7 @@
             padding: 20px;
             max-width: 1000px;
             margin: 0 auto;
+            padding-bottom: 60px; /* Чтобы footer не перекрывал контент */
         }
         .game-card {
             background: #2a2a2a;
@@ -60,7 +61,8 @@
             gap: 8px;
         }
         .btn:hover {
-            background: #990000;
+            background: #cc0000;
+            transform: scale(1.05);
         }
         footer {
             background: #222;
@@ -77,12 +79,7 @@
         }
         .telegram-btn:hover {
             background: #006699;
-        }
-        .btn-telegram {
-            background: #0088cc;
-        }
-        .btn-telegram:hover {
-            background: #006699;
+            transform: scale(1.05);
         }
     </style>
 </head>
@@ -103,8 +100,8 @@
             <p>✅ Чит на WH (WallHack) + AimBot</p>
             <p>✅ Чит на NoFlash + RadarHack</p>
             <p>✅ Авто-бампы и триггер-бот</p>
-            <button class="btn btn-telegram" onclick="redirectToTelegram('cs2')">
-                <i class="fab fa-telegram"></i> Скачать в Telegram
+            <button class="btn" onclick="redirectToTelegram('cs2')">
+                <i class="fas fa-download"></i> Скачать
             </button>
         </section>
 
@@ -113,8 +110,8 @@
             <p>✅ Fly Hack + SpeedHack</p>
             <p>✅ X-Ray для поиска алмазов</p>
             <p>✅ KillAura для PvP</p>
-            <button class="btn btn-telegram" onclick="redirectToTelegram('minecraft')">
-                <i class="fab fa-telegram"></i> Скачать в Telegram
+            <button class="btn" onclick="redirectToTelegram('minecraft')">
+                <i class="fas fa-download"></i> Скачать
             </button>
         </section>
 
@@ -123,8 +120,8 @@
             <p>✅ AimBot для всех классов</p>
             <p>✅ ESP (видит врагов через стены)</p>
             <p>✅ Авто-стрельба для Снайпера</p>
-            <button class="btn btn-telegram" onclick="redirectToTelegram('tf2')">
-                <i class="fab fa-telegram"></i> Скачать в Telegram
+            <button class="btn" onclick="redirectToTelegram('tf2')">
+                <i class="fas fa-download"></i> Скачать
             </button>
         </section>
 
@@ -133,8 +130,8 @@
             <p>✅ Читы для GTA V Online</p>
             <p>✅ Читы для Valorant (осторожно, античит!)</p>
             <p>✅ Читы для Warzone 2.0</p>
-            <button class="btn btn-telegram" onclick="redirectToTelegram('other')">
-                <i class="fab fa-telegram"></i> Скачать в Telegram
+            <button class="btn" onclick="redirectToTelegram('other')">
+                <i class="fas fa-download"></i> Скачать
             </button>
         </section>
 
@@ -146,24 +143,24 @@
         </div>
     </main>
     <footer>
-        <p>© 2025 LamaCheats | Внимание: Все права защищены авторским правом!</p>
+        <p>© 2025 LamaCheats | Внимание: играйте на здоровье!</p>
     </footer>
 
     <script>
         // Функция для перехода в Telegram с указанием игры
         function redirectToTelegram(game) {
             const gameLinks = {
-                'cs2': 'https://t.me/LamaCheatOnly?start=cs2',
-                'minecraft': 'https://t.me/LamaCheatOnly?start=minecraft',
-                'tf2': 'https://t.me/LamaCheatOnly?start=tf2',
-                'other': 'https://t.me/LamaCheatOnly?start=other'
+                'cs2': 'https://t.me/LamaCheatsOnlyBot?start=cs2',
+                'minecraft': 'https://t.me/LamaCheatsOnlyBot?start=minecraft',
+                'tf2': 'https://t.me/LamaCheatsOnlyBot?start=tf2',
+                'other': 'https://t.me/LamaCheatsOnlyBot?start=other'
             };
             window.open(gameLinks[game], '_blank');
         }
 
         // Функция для перехода в основной Telegram-канал
         function goToTelegram() {
-            window.open("https://t.me/FreeCheatsChannel", "_blank");
+            window.open("https://t.me/https://t.me/LamaCheatOnly", "_blank");
         }
     </script>
 </body>

@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LamaCheats — бесплатные читы для CS2, Minecraft, TF2 и других игр!</title>
+    <title>FreeCheats — бесплатные читы для CS2, Minecraft, TF2 и других игр!</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -53,6 +54,10 @@
             cursor: pointer;
             font-weight: bold;
             transition: 0.3s;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
         }
         .btn:hover {
             background: #990000;
@@ -73,11 +78,17 @@
         .telegram-btn:hover {
             background: #006699;
         }
+        .btn-telegram {
+            background: #0088cc;
+        }
+        .btn-telegram:hover {
+            background: #006699;
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>🔥 LamaCheats 🔥</h1>
+        <h1>🔥 FreeCheats 🔥</h1>
         <p>Бесплатные читы для CS2, Minecraft, TF2 и других игр!</p>
     </header>
     <nav>
@@ -92,7 +103,9 @@
             <p>✅ Чит на WH (WallHack) + AimBot</p>
             <p>✅ Чит на NoFlash + RadarHack</p>
             <p>✅ Авто-бампы и триггер-бот</p>
-            <button onclick="redirectToTelegram()" class="btn-download">Скачать</button>
+            <button class="btn btn-telegram" onclick="redirectToTelegram('cs2')">
+                <i class="fab fa-telegram"></i> Скачать в Telegram
+            </button>
         </section>
 
         <section id="minecraft" class="game-card">
@@ -100,7 +113,9 @@
             <p>✅ Fly Hack + SpeedHack</p>
             <p>✅ X-Ray для поиска алмазов</p>
             <p>✅ KillAura для PvP</p>
-            <button class="btn" onclick="downloadCheat('minecraft')">Скачать</button>
+            <button class="btn btn-telegram" onclick="redirectToTelegram('minecraft')">
+                <i class="fab fa-telegram"></i> Скачать в Telegram
+            </button>
         </section>
 
         <section id="tf2" class="game-card">
@@ -108,7 +123,9 @@
             <p>✅ AimBot для всех классов</p>
             <p>✅ ESP (видит врагов через стены)</p>
             <p>✅ Авто-стрельба для Снайпера</p>
-            <button class="btn" onclick="downloadCheat('tf2')">Скачать</button>
+            <button class="btn btn-telegram" onclick="redirectToTelegram('tf2')">
+                <i class="fab fa-telegram"></i> Скачать в Telegram
+            </button>
         </section>
 
         <section id="other" class="game-card">
@@ -116,22 +133,37 @@
             <p>✅ Читы для GTA V Online</p>
             <p>✅ Читы для Valorant (осторожно, античит!)</p>
             <p>✅ Читы для Warzone 2.0</p>
-            <button class="btn" onclick="downloadCheat('other')">Скачать</button>
+            <button class="btn btn-telegram" onclick="redirectToTelegram('other')">
+                <i class="fab fa-telegram"></i> Скачать в Telegram
+            </button>
         </section>
 
         <div style="text-align: center; margin-top: 30px;">
-            <h3>📢 Подпишись на наш Telegram-канал! Там можно скачать читы.</h3>
-            <button class="btn telegram-btn" onclick="goToTelegram()">Перейти в Telegram</button>
+            <h3>📢 Подпишись на наш Telegram-канал!</h3>
+            <button class="btn telegram-btn" onclick="goToTelegram()">
+                <i class="fab fa-telegram"></i> Перейти в Telegram
+            </button>
         </div>
     </main>
     <footer>
-        <p>© 2024 LamaCheats | Внимание: читы могут нарушать правила игр. Используйте на свой страх и риск!</p>
+        <p>© 2024 FreeCheats | Внимание: читы могут нарушать правила игр. Используйте на свой страх и риск!</p>
     </footer>
 
     <script>
-        // Функция для кнопки скачивания
+        // Функция для перехода в Telegram с указанием игры
+        function redirectToTelegram(game) {
+            const gameLinks = {
+                'cs2': 'https://t.me/YourCheatChannel?start=cs2',
+                'minecraft': 'https://t.me/YourCheatChannel?start=minecraft',
+                'tf2': 'https://t.me/YourCheatChannel?start=tf2',
+                'other': 'https://t.me/YourCheatChannel?start=other'
+            };
+            window.open(gameLinks[game], '_blank');
+        }
+
+        // Функция для перехода в основной Telegram-канал
         function goToTelegram() {
-            window.open("https://t.me/LamaCheatOnly", "_blank");
+            window.open("https://t.me/FreeCheatsChannel", "_blank");
         }
     </script>
 </body>
